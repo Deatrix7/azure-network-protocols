@@ -36,7 +36,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/egPWTdi.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create an “ACCOUNTANTS” Security Group, assign permissions, and test access
+
+--Go back to DC-1, in Active Directory, create a security group called “ACCOUNTANTS”
 </p>
 <br />
 
@@ -44,7 +46,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/CzC1PjK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+1. On the “accounting” folder you created earlier, set the following permissions:
+
+2. Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
+
+3. On Client-1, as  <someuser>, try to access the accountants folder. It should fail. 
+
+4. Log out of Client-1 as  <someuser>
+
+5. On DC-1, make <someuser> a member of the “ACCOUNTANTS”  Security Group
 </p>
 <br />
 
@@ -52,6 +63,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/YUU2GEq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Sign back into Client-1 as <someuser> and try to access the “accounting” share in \\DC-1\ - Does it work now? 
+
+That's it!
 </p>
 <br />
